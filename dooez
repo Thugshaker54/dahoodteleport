@@ -1,0 +1,103 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local CA = Instance.new("TextButton")
+local UIGradient = Instance.new("UIGradient")
+local GOC = Instance.new("TextButton")
+local Heal = Instance.new("TextButton")
+local spwn = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 122, 0, 102)
+Frame.Active = true
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = Frame
+
+CA.Name = "CA"
+CA.Parent = Frame
+CA.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+CA.BackgroundTransparency = 0.950
+CA.BorderSizePixel = 0
+CA.Size = UDim2.new(0, 57, 0, 22)
+CA.Font = Enum.Font.SourceSansBold
+CA.Text = "CA Weapons"
+CA.TextColor3 = Color3.fromRGB(255, 255, 255)
+CA.TextScaled = true
+CA.TextSize = 12.000
+CA.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(134, 134, 134)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(75, 75, 75))}
+UIGradient.Parent = Frame
+
+GOC.Name = "GOC"
+GOC.Parent = Frame
+GOC.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+GOC.BackgroundTransparency = 0.950
+GOC.BorderSizePixel = 0
+GOC.Position = UDim2.new(0, 0, 0.215686277, 0)
+GOC.Size = UDim2.new(0, 57, 0, 31)
+GOC.Font = Enum.Font.SourceSansBold
+GOC.Text = "GOC"
+GOC.TextColor3 = Color3.fromRGB(255, 255, 255)
+GOC.TextScaled = true
+GOC.TextSize = 15.000
+GOC.TextWrapped = true
+
+Heal.Name = "Heal"
+Heal.Parent = Frame
+Heal.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+Heal.BackgroundTransparency = 0.950
+Heal.BorderSizePixel = 0
+Heal.Position = UDim2.new(0, 0, 0.519607842, 0)
+Heal.Size = UDim2.new(0, 57, 0, 25)
+Heal.Font = Enum.Font.SourceSansBold
+Heal.Text = "HEALS"
+Heal.TextColor3 = Color3.fromRGB(255, 255, 255)
+Heal.TextScaled = true
+Heal.TextSize = 15.000
+Heal.TextWrapped = true
+
+spwn.Name = "spawn"
+spwn.Parent = Frame
+spwn.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+spwn.BackgroundTransparency = 0.950
+spwn.BorderSizePixel = 0
+spwn.Position = UDim2.new(0, 0, 0.778031588, 0)
+spwn.Size = UDim2.new(0, 57, 0, 22)
+spwn.Font = Enum.Font.SourceSansBold
+spwn.Text = "CarSpwn"
+spwn.TextColor3 = Color3.fromRGB(255, 255, 255)
+spwn.TextScaled = true
+spwn.TextSize = 15.000
+spwn.TextWrapped = true
+
+
+
+
+Heal.MouseButton1Click:Connect(function(h)
+	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216, 382, -93)
+end)
+
+GOC.MouseButton1Click:Connect(function(c)
+	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 370, 192)
+end)
+
+spwn.MouseButton1Click:Connect(function(r)
+	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1288, 382, -221)
+end)
+CA.MouseButton1Click:Connect(function()
+	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1307, 370, 627)
+end)
