@@ -11,10 +11,11 @@ local UIGradient = Instance.new("UIGradient")
 local GOC = Instance.new("TextButton")
 local Heal = Instance.new("TextButton")
 local spwn = Instance.new("TextButton")
+local Illegal = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.CoreGui
+ScreenGui.Parent = game.GoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
@@ -84,6 +85,18 @@ spwn.TextScaled = true
 spwn.TextSize = 15.000
 spwn.TextWrapped = true
 
+Illegal.Name = "Illegal"
+Illegal.Parent = Frame
+Illegal.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+Illegal.BackgroundTransparency = 0.950
+Illegal.Position = UDim2.new(0.385245889, 0, 0, 0)
+Illegal.Size = UDim2.new(0, 75, 0, 22)
+Illegal.Font = Enum.Font.SourceSansBold
+Illegal.Text = "Dealer"
+Illegal.TextColor3 = Color3.fromRGB(255, 255, 255)
+Illegal.TextScaled = true
+Illegal.TextSize = 14.000
+Illegal.TextWrapped = true
 
 
 
@@ -98,6 +111,10 @@ end)
 spwn.MouseButton1Click:Connect(function(r)
 	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1288, 382, -221)
 end)
-CA.MouseButton1Click:Connect(function()
+CA.MouseButton1Click:Connect(function(p)
 	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1307, 370, 627)
 end)
+Illegal.MouseButton1Click:Connect(function(v)
+    pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+    pl.CFrame = game.Workspace.IllegalDealership.IllegalDealership.PartPointer.CFrame
+end)    
